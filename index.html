@@ -36,9 +36,9 @@ comments: true
 		{% endfor %}
 		{% if post.noimage %}
 		{% else %}		
-		<img
+<!--		<img
 			alt="{{ post.title }}"
-			src="/assets/images/top.jpg" class="img-responsive">
+			src="/assets/images/{{post.id}}/top.jpg" class="img-responsive">-->
 		{% endif %}
 		<p>{{ post.excerpt | strip_html}}</p>
 		<a href="{{ post.url }}">Read more...</a>
