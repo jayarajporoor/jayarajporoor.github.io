@@ -54,10 +54,24 @@
 	 .hdr {
 	 	font-family: "Comic Sans MS", cursive, sans-serif;
 	 }		
+	 .firstchar{
+	 	font-size:120%;
+	 	color:#006400
+	 }
 	</style>
 	<div class="jumbotron  clearfix">
-
+		{% if page.landing %}
+		<h1 class="hdr text-center">
+			<span class="firstchar">Ⓓ</span>o 
+			<span class="firstchar">Ⓘ</span>t 
+			<span class="firstchar">Ⓨ</span>ourself 
+			💡
+			 <span class="firstchar">Ⓐ</span>lgorithms					
+		</h1>
+		{% else %}
 		<h1 class="hdr text-center">{{ page.title }}</h1>
+		{% endif %}
+
 
 	</div>
 </div>
