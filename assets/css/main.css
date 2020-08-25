@@ -42,10 +42,13 @@ h3:before {
 	letter-spacing: 0.2em;
 	font-size: 3em;
 	text-align: center;
-	text-transform: uppercase;
 	letter-spacing: 0.2em;
 }
 
+.heading{
+	font-weight:bold;
+	font-size: 150%;
+}
 .footer {
 	position: absolute;
 	padding-right: 1em;
