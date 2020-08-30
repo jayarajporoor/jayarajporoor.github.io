@@ -34,7 +34,7 @@ Combined parsing/evaluating of expression strings without explicit AST generatio
 
 <div>
 <div class='heading'>Right associativity</div>
- Top-down parsing tends to introduce right-associativity for the operators, i.e., if an operator with same precedence appears on left and right sides of an operand, the operand will associate with the operator on the right side. So <code>1 - 3 - 2</code> would be parsed as <code>1 - (3 - 2)</code>, evaluating to 0 rather than the customary -4.  Therefore, we need to provide parenthesis to make the associativity explicit. The solution is to rewrite the grammar as follows:
+ Top-down parsing tends to introduce right-associativity for the operators, i.e., if an operator with same precedence appears on left and right sides of an operand, the operand will associate with the operator on the right side. So <code>1 - 3 - 2</code> would be parsed as <code>1 - (3 - 2)</code>, evaluating to 0 rather than the customary -4.  Therefore, we need to provide parenthesis to make the associativity explicit. The solution is to a standard rewrite of the grammar as follows:
 </div>
 <pre><code>E ::=  T X
 X ::=  '+' T X  |  '-' T X  |  epsilon
@@ -42,7 +42,7 @@ T  ::= F Y
 Y  ::= '*' F Y  |  '/' F Y | epsilon
 F  ::=  number  |  variable  |   '('  E  ')'</code></pre>
 <div>
-Using the given code as a reference, you could try implementing a top-down parser using this grammar and see the difference in outcomes. 
+Using the given code as a reference, you could try implementing a top-down parser using this grammar and see the difference in outcomes. (Thanks to <a href="https://cse.buffalo.edu/faculty/bharat/" target="_new">Prof. Bharat Jayaraman</a> for pointing out right associativity and providing the grammar rewrite).
 </div>
 
 <div class='heading'>Watch Now</div>
