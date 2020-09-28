@@ -1,6 +1,6 @@
 ---
 layout: default
-title:  "Single pass evaluation of expression strings (Python)."
+title:  "DIY Parser/Evaluator (Python)."
 date:   2019-12-14 09:00:00 +0200
 published: 2019-12-14 09:00:00 +0200
 comments: true
@@ -13,7 +13,7 @@ github: "https://github.com/jayarajporoor/pylib/tree/master/expr_eval"
 <p>
 
 
-Combined parsing/evaluating of expression strings without explicit AST generation. Python implementation. Covers concepts: 
+Simplified parser/evaluator of expression strings without explicit AST generation. Python implementation. Covers concepts: 
 
 <ul>
 	<li>Generators/lazy sequences.</li>
@@ -42,7 +42,7 @@ T  ::= F Y
 Y  ::= '*' F Y  |  '/' F Y | epsilon
 F  ::=  number  |  variable  |   '('  E  ')'</code></pre>
 <div>
-Using the given code as a reference, you could try implementing a top-down parser using this grammar and see the difference in outcomes. (Thanks to <a href="https://cse.buffalo.edu/faculty/bharat/" target="_new">Prof. Bharat Jayaraman</a> for pointing out right associativity and providing the grammar rewrite).
+Using the given code as a reference, you could try implementing a top-down parser using this grammar and see the difference in outcomes. (Thanks to <a href="https://cse.buffalo.edu/faculty/bharat/" target="_new">Prof. Bharat Jayaraman</a> for pointing out right associativity and providing the grammar rewrite). 
 </div>
 
 <div class='heading'>Watch Now</div>
